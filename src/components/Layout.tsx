@@ -76,9 +76,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </ul>
           </nav>
           <div className="p-4 border-t mt-auto">
-            <div className="flex items-center space-x-2">
-              <Settings size={20} />
-              <span>Settings</span>
+            <div className="flex justify-between items-center">
+              <div className="flex items-center space-x-2">
+                <Settings size={20} />
+                <span>Settings</span>
+              </div>
+              <div className="text-xs text-gray-500 font-medium">
+                Made by Vedad
+              </div>
             </div>
           </div>
         </aside>
@@ -114,6 +119,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </ul>
         </div>
       </nav>
+      
+      {/* Footer credit for mobile */}
+      <div className="md:hidden py-2 text-center text-xs text-gray-500 bg-white border-t border-gray-100">
+        Made by Vedad
+      </div>
     </div>
   );
 };
